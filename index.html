@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parabéns meu amorrrrrrrrrrrrr</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Parabéns nenémmmm! &hearts;</a>
+        <!--<ul>
+            <li><a href="#" class="ativo">vo descreve em uma frase</a></li>
+            <li><a href="#">Para</a></li>
+            <li><a href="#">Béns</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>!-->
+    </header>
+    <section>
+        <img src="assets/stars.png" id="stars">
+        <img src="assets/moon.png" id="moon">
+        <img src="assets/mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Olá, meu amor</h2>
+        <a href="#sec" id="btn" onclick="playVid()">Clique aqui</a>
+        <img src="assets/mountains_front.png" id="mountains_front">
+        
+    </section>
+    <div class="sec" id="sec">
+        <video controls autoplay id="matue">
+            <source src="/assets/videoplayback.mp4" type="video/mp4">
+            Your browser does not support the audio element.
+        </video>
+        <h2>Feliz seu dia mooooo</h2>
+        <p>Parabéns meu amor, muitos anos de vida e sucesso para você!!!! você merece o mundo todo, eu nunca vi alguém igual a você minha vida, merece tudo de bom que existe nesse planeta terra!! são anos de eperiências e coisas únicas que aconteceram em sua vida e eu tenho certeza que tudo isso faz parte da sua história!! feliz seu dia, você é incrível, merece tudo de bom que existe nessa vida e logo menos vai chegar o dia em que tudo de bom virá até você neném!! você merece!!!!!, eu te amo muitão, cada pedaço de você tem uma história e você muito mais que qualquer um sabe disso vida, você é feita de tantas coisas, moldada na vida de uma forma tão única que chega a ser especial!!, continue sendo essa pessoa incrível e guerreira que você é meu amor! <br><br>Eu não tenho muito a te oferecer como presente mas fiz esse site aqui pra não deixar passar em branco mo, eu te amo e feliz seu dia!!!!!!!!!!!!!<br><br> Que você evolua muito e cresça e viva muitos anos de alegria!! Eu te amo &hearts;</p>
+    </div>
+
+    <script>
+        let vid = document.getElementById("matue");
+
+        function playVid() {
+            vid.play();
+        }
+
+        function pauseVid() {
+            vid.pause();
+        }
+
+        let stars = document.getElementById('stars'); 
+        let moon = document.getElementById('moon'); 
+        let mountains_behind = document.getElementById('mountains_behind'); 
+        let text = document.getElementById('text'); 
+        let btn = document.getElementById('btn'); 
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header'); 
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+</body>
+</html>
